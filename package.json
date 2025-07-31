@@ -1,0 +1,31 @@
+{
+  "name": "type-db",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/index.ts",
+  "scripts": {
+    "build": "tsc",
+    "start": "concurrently -k -n TSC,NODE -c yellow,cyan \"tsc -w\" \"nodemon dist/js/index.js\"",
+    "dev": "concurrently \"tsc -w\" \"nodemon dist/js/index.js\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "mongodb": "^6.18.0",
+    "mongoose": "^8.17.0",
+    "typescript": "^5.8.3"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/mongoose": "^5.11.96",
+    "@types/node": "^24.1.0",
+    "concurrently": "^9.2.0",
+    "nodemon": "^3.1.10"
+  }
+}
